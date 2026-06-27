@@ -10,22 +10,29 @@ body {
   min-height: 2000px;
 }
 
+/* HERO */
+.hero {
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
 .hero::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
-  background-image: url(img/wedbody.jpg);
-  object-fit: cover;
-  z-index: -1;
-}
 
-.hero {
-  overflow: hidden;
-  position: relative;
-  min-height: 100vh;
+  background-image: url(img/wedbody.jpg);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: -1;
 }
 
 .hero h1,
@@ -47,6 +54,7 @@ body {
 .hero h4 {
   font-size: clamp(1.2rem, 2vw, 1.6rem);
 }
+
 .hero p {
   font-size: clamp(1rem, 2vw, 1.4rem);
 }
@@ -63,6 +71,7 @@ body {
   color: white;
 }
 
+/* FONT */
 @font-face {
   font-family: "Sacramento-Regular";
   src: url("font/Sacramento/Sacramento-Regular.ttf");
@@ -73,43 +82,21 @@ body {
   src: url("font/Work_Sans/static/WorkSans-Medium.ttf");
 }
 
-/* @media (max-width: 992px) {
+/* MOBILE */
+@media (max-width: 576px) {
+
   html {
     font-size: 75%;
   }
-  .simply-countdown > .simply-section {
-    padding: 70px;
-  }
-}
-
-@media (max-width: 768px) {
-  html {
-    font-size: 65%;
-  }
-  .simply-countdown > .simply-section {
-    padding: 60px;
-    margin: 3px;
-  }
-}
-
-@media (max-width: 576px) {
-  html {
-    font-size: 60%;
-  }
-  .simply-countdown > .simply-section {
-    padding: 45px;
-    margin: 3px;
-  }
-} */
-@media (max-width: 576px) {
 
   .hero h1 {
     font-size: 4rem;
-    line-height: 1;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    line-height: 1;
   }
 
   .hero h1 span {
@@ -131,11 +118,13 @@ body {
 
   .simply-countdown {
     gap: 5px;
+    justify-content: center;
   }
 
   .simply-countdown > .simply-section {
     width: 70px;
     height: 70px;
+
     margin: 2px;
   }
 
