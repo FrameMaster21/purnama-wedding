@@ -37,6 +37,11 @@ body {
 .hero h1 {
   font-family: "Sacramento-Regular", cursive;
   font-size: clamp(4rem, 8vw, 6rem);
+  line-height: 1;
+}
+
+.hero h1 span {
+  display: inline;
 }
 
 .hero h4 {
@@ -97,9 +102,18 @@ body {
   }
 } */
 @media (max-width: 576px) {
+
   .hero h1 {
     font-size: 4rem;
     line-height: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 span {
+    display: block;
   }
 
   .hero h4 {
